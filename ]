@@ -7,4 +7,3 @@ Minimal status bar for i3
 ```bash
 sudo apt-get install i3status
 ```
-

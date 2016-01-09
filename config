@@ -183,6 +183,8 @@ bindsym $mod+Ctrl+f exec --no-startup-id /usr/bin/thunar
 # clementine shortcut
 bindsym $mod+Ctrl+m exec --no-startup-id /usr/bin/clementine
 
+bindsym $mod+Ctrl+v exec --no-startup-id /opt/viber/Viber
+
 #bindsym Ctrl+Mod4+l exec xautolock -locknow
 
 # --------------------------------------------------------------
@@ -202,7 +204,7 @@ exec --no-startup-id i3-msg 'workspace 9:thunar; exec /usr/bin/thunar'
 
 # -------- move application to workspace --------
 
-assign [class="(?i)firefox"] →  1:web 
+assign [class="(?i)firefox"] →  1:web
 assign [class="(?i)viber"] → 2:viber
 assign [class="(?i)thunar"] →  9:thunar
 assign [class="(?i)smplayer"] →  8:media
