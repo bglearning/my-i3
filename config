@@ -167,7 +167,6 @@ bindsym $mod+Ctrl+l workspace next
 # ScreenEat whole
 #bindsym Ctrl+$mod+p exec --no-startup-id /home/Nish/Programming/Python/projects/ScreenEat/ScreenEat.py --cropped
 
-# --------------------------------------------------------------
 
 # ** screen brightness controls **
 # increase brightness
@@ -175,13 +174,25 @@ bindsym XF86MonBrightnessUp exec xbacklight -inc 20
 # decrease brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 20
 
+# firefox shortcut
+bindsym $mod+Ctrl+w exec --no-startup-id exec /usr/bin/firefox
+
+# thunar shortcut
+bindsym $mod+Ctrl+f exec --no-startup-id exec /usr/bin/thunar
+
+# clementine shortcut
+bindsym $mod+Ctrl+m exec --no-startup-id exec /usr/bin/clementine
+
+
+# --------------------------------------------------------------
+
 # ------- Start applications in workspace during startup ----
 
-# workspace 3 - firefox
-exec --no-startup-id i3-msg 'workspace 3:Web; exec /usr/bin/firefox'
+# workspace 1 - firefox
+exec --no-startup-id i3-msg 'workspace 1:Web; exec /usr/bin/firefox'
 
-# workspace 4 - viber
-exec --no-startup-id i3-msg 'workspace 4:Viber; exec /opt/viber/Viber'
+# workspace 2 - viber
+exec --no-startup-id i3-msg 'workspace 2:Viber; exec /opt/viber/Viber'
 
 # workspace 9 - thunar
 exec --no-startup-id i3-msg 'workspace 9; exec /usr/bin/thunar'
@@ -190,7 +201,9 @@ exec --no-startup-id i3-msg 'workspace 9; exec /usr/bin/thunar'
 
 # -------- move application to workspace --------
 
+assign [class="(?i)firefox"] →  1
 assign [class="(?i)thunar"] →  9
 assign [class="(?i)smplayer"] →  8
+assign [class="(?i)clementine"] →  8
 
 # ---------------------------------------------
