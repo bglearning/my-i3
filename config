@@ -37,10 +37,10 @@ bindsym $mod+d exec dmenu_run
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # change focus
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+semicolon focus right
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -49,10 +49,10 @@ bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 # move focused window
-bindsym $mod+Shift+j move left
-bindsym $mod+Shift+k move down
-bindsym $mod+Shift+l move up
-bindsym $mod+Shift+semicolon move right
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
@@ -61,7 +61,7 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-bindsym $mod+h split h
+bindsym $mod+b split h
 
 # split in vertical orientation
 bindsym $mod+v split v
@@ -87,15 +87,15 @@ bindsym $mod+a focus parent
 #bindsym $mod+d focus child
 
 # switch to workspace
-bindsym $mod+1 workspace 1
-bindsym $mod+2 workspace 2
+bindsym $mod+1 workspace 1:web
+bindsym $mod+2 workspace 2:viber
 bindsym $mod+3 workspace 3
 bindsym $mod+4 workspace 4
 bindsym $mod+5 workspace 5
 bindsym $mod+6 workspace 6
 bindsym $mod+7 workspace 7
-bindsym $mod+8 workspace 8
-bindsym $mod+9 workspace 9
+bindsym $mod+8 workspace 8:media
+bindsym $mod+9 workspace 9:thunar
 bindsym $mod+0 workspace 10
 
 # move focused container to workspace
@@ -159,51 +159,53 @@ bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -- -5%
 # toggle mute
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle 
-# previous workspace
-bindsym $mod+Ctrl+h workspace prev
-# next workspace
-bindsym $mod+Ctrl+l workspace next
 
-# ScreenEat whole
-#bindsym Ctrl+$mod+p exec --no-startup-id /home/Nish/Programming/Python/projects/ScreenEat/ScreenEat.py --cropped
-
-
-# ** screen brightness controls **
 # increase brightness
 bindsym XF86MonBrightnessUp exec xbacklight -inc 20
 # decrease brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 20
 
+# previous workspace
+bindsym $mod+Ctrl+h workspace prev
+# next workspace
+bindsym $mod+Ctrl+l workspace next
+
+
+# ScreenEat whole
+bindsym $mod+Ctrl+p exec --no-startup-id /home/paradox/Nish/Programming/Python/projects/ScreenEat/ScreenEat.py
+
 # firefox shortcut
-bindsym $mod+Ctrl+w exec --no-startup-id exec /usr/bin/firefox
+bindsym $mod+Ctrl+w exec --no-startup-id /usr/bin/firefox
 
 # thunar shortcut
-bindsym $mod+Ctrl+f exec --no-startup-id exec /usr/bin/thunar
+bindsym $mod+Ctrl+f exec --no-startup-id /usr/bin/thunar
 
 # clementine shortcut
-bindsym $mod+Ctrl+m exec --no-startup-id exec /usr/bin/clementine
+bindsym $mod+Ctrl+m exec --no-startup-id /usr/bin/clementine
 
+#bindsym Ctrl+Mod4+l exec xautolock -locknow
 
 # --------------------------------------------------------------
 
 # ------- Start applications in workspace during startup ----
 
 # workspace 1 - firefox
-exec --no-startup-id i3-msg 'workspace 1:Web; exec /usr/bin/firefox'
+exec --no-startup-id i3-msg 'workspace 1:web; exec /usr/bin/firefox'
 
 # workspace 2 - viber
-exec --no-startup-id i3-msg 'workspace 2:Viber; exec /opt/viber/Viber'
+exec --no-startup-id i3-msg 'workspace 2:viber; exec /opt/viber/Viber'
 
 # workspace 9 - thunar
-exec --no-startup-id i3-msg 'workspace 9; exec /usr/bin/thunar'
+exec --no-startup-id i3-msg 'workspace 9:thunar; exec /usr/bin/thunar'
 
 # --------------------------------------------------------------
 
 # -------- move application to workspace --------
 
-assign [class="(?i)firefox"] →  1
-assign [class="(?i)thunar"] →  9
-assign [class="(?i)smplayer"] →  8
-assign [class="(?i)clementine"] →  8
+assign [class="(?i)firefox"] →  1:web 
+assign [class="(?i)viber"] → 2:viber
+assign [class="(?i)thunar"] →  9:thunar
+assign [class="(?i)smplayer"] →  8:media
+assign [class="(?i)clementine"] →  8:media
 
 # ---------------------------------------------
