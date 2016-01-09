@@ -99,15 +99,15 @@ bindsym $mod+9 workspace 9:thunar
 bindsym $mod+0 workspace 10
 
 # move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace 1
-bindsym $mod+Shift+2 move container to workspace 2
+bindsym $mod+Shift+1 move container to workspace 1:web
+bindsym $mod+Shift+2 move container to workspace 2:viber
 bindsym $mod+Shift+3 move container to workspace 3
 bindsym $mod+Shift+4 move container to workspace 4
 bindsym $mod+Shift+5 move container to workspace 5
 bindsym $mod+Shift+6 move container to workspace 6
 bindsym $mod+Shift+7 move container to workspace 7
-bindsym $mod+Shift+8 move container to workspace 8
-bindsym $mod+Shift+9 move container to workspace 9
+bindsym $mod+Shift+8 move container to workspace 8:media
+bindsym $mod+Shift+9 move container to workspace 9:thunar
 bindsym $mod+Shift+0 move container to workspace 10
 
 # reload the configuration file
@@ -172,7 +172,11 @@ bindsym $mod+Ctrl+l workspace next
 
 
 # ScreenEat whole
-bindsym $mod+Ctrl+p exec --no-startup-id /home/paradox/Nish/Programming/Python/projects/ScreenEat/ScreenEat.py
+bindsym $mod+p exec --no-startup-id /home/paradox/Nish/Programming/Python/projects/ScreenEat/ScreenEat.py
+# ScreenEat Active window
+bindsym $mod+o exec --no-startup-id /home/paradox/Nish/Programming/Python/projects/ScreenEat/ScreenEat.py --active
+# ScreenEat cropped
+bindsym $mod+i exec --no-startup-id /home/paradox/Nish/Programming/Python/projects/ScreenEat/ScreenEat.py --cropped
 
 # firefox shortcut
 bindsym $mod+Ctrl+w exec --no-startup-id /usr/bin/firefox
@@ -209,5 +213,15 @@ assign [class="(?i)viber"] → 2:viber
 assign [class="(?i)thunar"] →  9:thunar
 assign [class="(?i)smplayer"] →  8:media
 assign [class="(?i)clementine"] →  8:media
+
+# ---------------------------------------------
+
+# ------ fixed window mode for certain applicatonis -----
+
+# screeneat window -> floating mode
+for_window [title="(?i)ScreenEat"] floating enable
+
+# copy progress window -> floating mode
+for_window [title="(?i)File Operation Progress"] floating enable
 
 # ---------------------------------------------
