@@ -10,6 +10,7 @@
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
 set $mod Mod1
+set $super Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below. ISO 10646 = Unicode
@@ -161,13 +162,26 @@ bar {
 # exec wicd-gtk -t
 
 # ------------------ my keybindings -------------------
-# ** Pulse Audio Controls **
+#
+# ****** Audio Controls *******
+# use Pulse audio
+#
 # increase sound volume
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%
+
 # decrease sound volume
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -- -5%
+
 # toggle mute
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle 
+
+# use amixer
+
+#bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -D pulse sset Master 5%+
+#bindsym XF86AudioLowerVolume exec --no-startup-id amixer -D pulse sset Master 5%-
+#bindsym XF86AudioMute exec --no-startup-id amixer set Master toggle 
+
+# *****************************************************
 
 # increase brightness
 bindsym XF86MonBrightnessUp exec xbacklight -inc 20
@@ -199,22 +213,27 @@ bindsym $mod+Ctrl+m exec --no-startup-id /usr/bin/clementine
 # viber shortcut
 bindsym $mod+Ctrl+v exec --no-startup-id /opt/viber/Viber
 
+# network manager gtk ui
+bindsym $mod+Ctrl+n exec --no-startup-id wicd-gtk
+
 #bindsym Ctrl+Mod4+l exec xautolock -locknow
 
-# --------------------------------------------------------------
+# -------------------------------------------------------------
 
 # ------- Start applications in workspace during startup ----
 
 # workspace 1 - firefox
-exec --no-startup-id i3-msg 'workspace 1:web; exec /usr/bin/firefox'
+exec --no-startup-id i3-msg 'workspace 1:web; exec /usr/bin/firefox' &
 
 # workspace 2 - viber
-exec --no-startup-id i3-msg 'workspace 2:viber; exec /opt/viber/Viber'
+exec --no-startup-id i3-msg 'workspace 2:viber; exec /opt/viber/Viber' &
 
 # workspace 9 - thunar
-exec --no-startup-id i3-msg 'workspace 9:thunar; exec /usr/bin/thunar'
+exec --no-startup-id i3-msg 'workspace 9:thunar; exec /usr/bin/thunar' & 
 
-# --------------------------------------------------------------
+exec --no-startup-id i3-msg 'exec wicd-gtk' &
+
+# -----------------------------------------------------------
 
 # -------- move application to workspace --------
 
@@ -229,9 +248,12 @@ assign [class="(?i)clementine"] →  8:media
 # ------ fixed window mode for certain applicatonis -----
 
 # screeneat window -> floating mode
-for_window [title="(?i)ScreenEat"] floating enable
+for_window [title="(?i)ScreenEat.*"] floating enable
 
 # copy progress window -> floating mode
 for_window [title="(?i)File Operation Progress"] floating enable
+for_window [title="(?i)File Operation Progress"] floating enable
+
+for_window [title="(?i)Network Manager"] floating enable
 
 # ---------------------------------------------
