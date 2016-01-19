@@ -240,7 +240,11 @@ exec --no-startup-id i3-msg 'workspace 2:viber; exec /opt/viber/Viber' &
 # workspace 9 - thunar
 exec --no-startup-id i3-msg 'workspace 9:thunar; exec /usr/bin/thunar' & 
 
+# network manager GUI
 exec --no-startup-id i3-msg 'exec wicd-gtk' &
+
+# set wallpaper
+exec --no-startup-id i3-msg 'exec nitrogen --set-scaled ~/Nish/stuffs/wallpapers/cartoon/minimalistic_pinocchio_black_background.jpg' &
 
 # -----------------------------------------------------------
 

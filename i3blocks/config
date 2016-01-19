@@ -72,7 +72,7 @@ interval=10
 [battery]
 label=BAT
 #label=⚡
-command=$HOME/.config/i3blocks/battery
+command=$HOME/.config/i3blocks/battery1.sh
 interval=30
 
 [nepali]
@@ -93,3 +93,7 @@ instance=Master
 command=$HOME/.config/i3blocks/volume
 interval=1
 signal=10
+
+#[test]
+#full_text=<span background="red" foreground="white">Salut</span>
+#markup=pango

@@ -32,3 +32,59 @@ sudo apt-get update
 sudo apt-get install i3blocks
 ```
 
+---------------------
+
+## Dependencies
+
+### 1. thunar
+My favourite file manager  
+
+```bash
+sudo apt-get install thunar
+```
+
+### 2. firefox
+web browser  
+
+```bash
+sudo apt-get install firefox
+```
+
+### 3. ScreenEat
+screen capture tool  
+[https://github.com/NISH1001/ScreenEat](https://github.com/NISH1001/ScreenEat)
+
+### 4. clementine
+my favourite music player 
+
+```bash
+sudo apt-get install clementine
+```
+
+### 5. smplayer
+video player  
+
+```bash
+sudo apt-get install smplayer
+```
+
+### 6. nepalica
+a nepali-english date tool  
+[https://github.com/tnagorra/nepalical](https://github.com/tnagorra/nepalical)
+
+### 7. nitrogen
+minimal wallpaper tool  
+
+```bash
+sudo apt-get install nitrogen
+```
+
+### 8. wicd-gtk
+a minimal GUI for network management
+
+```bash
+sudo apt-get install wicd-gtk
+```bash
+
+### 9. pulse audio
+sound server on top of alsa
