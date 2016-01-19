@@ -68,7 +68,7 @@ video player
 sudo apt-get install smplayer
 ```
 
-### 6. nepalica
+### 6. nepalical
 a nepali-english date tool  
 [https://github.com/tnagorra/nepalical](https://github.com/tnagorra/nepalical)
 
@@ -84,7 +84,11 @@ a minimal GUI for network management
 
 ```bash
 sudo apt-get install wicd-gtk
-```bash
+```
 
 ### 9. pulse audio
 sound server on top of alsa
+
+```bash
+sudo apt-get install pulseaudio
+```
