@@ -47,7 +47,7 @@ instance=wlan0
 #instance=wlp3s0
 command=$HOME/.config/i3blocks/network
 color=#00FF00
-interval=10
+interval=2
 
 [ethernet]
 label=E
@@ -80,6 +80,11 @@ interval=30
 command=$HOME/.config/i3blocks/nepali.py
 interval=once
 color=#FFFFFF
+
+#[speed]
+#command=$HOME/.config/i3blocks/speed.sh
+#interval=10
+#color=#00FF00
 
 [time]
 command=date '+%a %Y-%m-%d %H:%M'
