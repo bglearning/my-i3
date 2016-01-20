@@ -32,6 +32,13 @@ sudo apt-get update
 sudo apt-get install i3blocks
 ```
 
+## dunst
+a minimial notification deamon  
+
+```bash
+sudo apt-get install dunst
+```
+
 ---------------------
 
 ## Dependencies

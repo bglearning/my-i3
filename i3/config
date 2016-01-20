@@ -166,20 +166,24 @@ bar {
 # ****** Audio Controls *******
 # use Pulse audio
 #
-# increase sound volume
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%
-
-# decrease sound volume
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -- -5%
-
-# toggle mute
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle 
+## increase sound volume
+#bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%
+#
+## decrease sound volume
+#bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -- -5%
+#
+## toggle mute
+#bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle 
 
 # use amixer
 
-#bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -D pulse sset Master 5%+
-#bindsym XF86AudioLowerVolume exec --no-startup-id amixer -D pulse sset Master 5%-
-#bindsym XF86AudioMute exec --no-startup-id amixer set Master toggle 
+bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -D pulse sset Master 5%+
+bindsym XF86AudioLowerVolume exec --no-startup-id amixer -D pulse sset Master 5%-
+bindsym XF86AudioMute exec --no-startup-id amixer -D pulse sset Master toggle 
+
+#bindsym XF86AudioRaiseVolume exec --no-startup-id ~/.config/i3/volume.sh --up
+#
+#bindsym XF86AudioLowerVolume exec --no-startup-id ~/.config/i3/volume.sh --down
 
 # next
 bindsym XF86AudioNext exec --no-startup-id clementine -f
@@ -201,7 +205,6 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 20
 bindsym $mod+Ctrl+h workspace prev
 # next workspace
 bindsym $mod+Ctrl+l workspace next
-
 
 # ScreenEat whole
 bindsym $mod+p exec --no-startup-id /home/paradox/Nish/Programming/Python/projects/ScreenEat/ScreenEat.py
