@@ -99,3 +99,11 @@ sound server on top of alsa
 ```bash
 sudo apt-get install pulseaudio
 ```
+
+### 10. acpi
+a tool for getting powerinfo
+
+--------------------------------
+
+## Arch linux
+The tools can be installed from pacman or yaourt

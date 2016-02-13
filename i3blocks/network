@@ -15,14 +15,15 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 
-INTERFACE="${BLOCK_INSTANCE:-eth0}"
+INTERFACE="${BLOCK_INSTANCE:-enp3s0}"
 
 state="$(cat /sys/class/net/$INTERFACE/operstate)"
-myssid=$(iwgetid -r)
+# myssid=$(iwgetid -r)
+myssid=$(nmcli -t -f NAME connection show --active)
 
 if [ "$state" != "up" ]; then
-	echo "down"
-	echo "down"
+	echo ""
+	echo ""
 	echo "#FF0000"
 	exit 0
 fi
@@ -34,6 +35,7 @@ ipaddr="${ipaddr:-0.0.0.0}"
 
 # full text
 spd="$(echo `~/.config/i3blocks/speed.sh`)"
+#echo -n "$myssid"
 echo -n "$myssid $spd"
 [ -n "$speed" ] && echo " ($speed Mbits/s)" || echo
 

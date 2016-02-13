@@ -42,17 +42,17 @@ separator_block_width=14
 #interval=30
 
 [wireless]
-label=W:
-instance=wlan0
-#instance=wlp3s0
+label=
+#instance=wlan0
+instance=wlp2s0
 command=$HOME/.config/i3blocks/network
 color=#00FF00
-interval=2
+interval=1
 
 [ethernet]
-label=E
-instance=eth0
-#instance=enp0s25
+label=
+#instance=eth0
+instance=enp3s0
 command=$HOME/.config/i3blocks/network
 color=#00FF00
 interval=10
@@ -70,7 +70,8 @@ interval=10
 #interval=10
 
 [battery]
-label=BAT
+label=
+#label=
 #label=⚡
 command=$HOME/.config/i3blocks/battery1.sh
 interval=30
@@ -92,7 +93,7 @@ interval=60
 
 [volume]
 #label=VOL
-label=♪
+label=
 instance=Master
 #instance=PCM
 command=$HOME/.config/i3blocks/volume
