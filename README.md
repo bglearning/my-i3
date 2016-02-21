@@ -41,7 +41,7 @@ sudo apt-get install dunst
 
 ---------------------
 
-## Dependencies
+## Extra Applications
 
 ### 1. thunar
 My favourite file manager  

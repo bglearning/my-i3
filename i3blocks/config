@@ -70,11 +70,10 @@ interval=10
 #interval=10
 
 [battery]
-label=
 #label=
 #label=⚡
 command=$HOME/.config/i3blocks/battery1.sh
-interval=30
+interval=10
 
 [nepali]
 #label=Nepali
