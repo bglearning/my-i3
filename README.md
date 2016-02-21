@@ -3,7 +3,8 @@ My configuration for i3 wm
 
 ## path for the files
 ```bash
-~/.config/
+~/.config/i3blocks
+~/.i3/
 ```
 
 ## i3
@@ -44,63 +45,22 @@ sudo apt-get install dunst
 ## Extra Applications
 
 ### 1. thunar
-My favourite file manager  
+File Manager for Linux and other Unix like systems
 
 ```bash
 sudo apt-get install thunar
 ```
 
-### 2. firefox
+### 2. google-chrome
 web browser  
 
-```bash
-sudo apt-get install firefox
-```
+### 3. [ScreenEat](https://github.com/NISH1001/ScreenEat)
+Screenshots made delicious
 
-### 3. ScreenEat
-screen capture tool  
-[https://github.com/NISH1001/ScreenEat](https://github.com/NISH1001/ScreenEat)
-
-### 4. clementine
-my favourite music player 
-
-```bash
-sudo apt-get install clementine
-```
-
-### 5. smplayer
-video player  
-
-```bash
-sudo apt-get install smplayer
-```
-
-### 6. nepalical
+### 4. [nepalical](https://github.com/tnagorra/nepalical)
 a nepali-english date tool  
-[https://github.com/tnagorra/nepalical](https://github.com/tnagorra/nepalical)
 
-### 7. nitrogen
-minimal wallpaper tool  
-
-```bash
-sudo apt-get install nitrogen
-```
-
-### 8. wicd-gtk
-a minimal GUI for network management
-
-```bash
-sudo apt-get install wicd-gtk
-```
-
-### 9. pulse audio
-sound server on top of alsa
-
-```bash
-sudo apt-get install pulseaudio
-```
-
-### 10. acpi
+### 5. acpi
 a tool for getting powerinfo
 
 --------------------------------
